@@ -1,0 +1,51 @@
+#include <stdio.h>
+
+int main()
+{
+    int a, b, add, sub, multi, div;
+    char op;
+
+    printf("ENTER THE FIRST NUMBER: ");
+    scanf("%d", &a);
+
+    printf("ENTER THE SECOND NUMBER: ");
+    scanf("%d", &b);
+
+    printf("ENTER THE OPERATION: ");
+    scanf(" %c", &op);
+
+    switch (op)
+    {
+        case '+':
+            add = a + b;
+            printf("THE ADDITION IS %d", add);
+            break;
+
+        case '-':
+            sub = a - b;
+            printf("THE SUBTRACTION IS %d", sub);
+            break;
+
+        case '*':
+            multi = a * b;
+            printf("THE MULTIPLICATION IS %d", multi);
+            break;
+
+        case '/':
+            if (b != 0)
+            {
+                div = a / b;
+                printf("THE DIVISION IS %d", div);
+            }
+            else
+            {
+                printf("CANNOT DIVIDE BY ZERO");
+            }
+            break;
+
+        default:
+            printf("INVALID OPERATION");
+    }
+
+    return 0;
+}
